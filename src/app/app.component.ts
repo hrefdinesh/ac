@@ -6,6 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { AboutPage } from '../pages/about/about';
+import { moList } from '../pages/mo-list/mo-list';
 import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
 
 
@@ -28,6 +29,7 @@ export class MyApp {
       { title: 'Home', component: HomePage },
       { title: 'List', component: ListPage },
       { title: 'About', component: AboutPage },
+      { title: 'MoList', component: moList },
       { title: 'HelloIonic', component: HelloIonicPage }
     ];
 
