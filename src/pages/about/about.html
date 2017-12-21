@@ -1,0 +1,55 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>About Page</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding class="cards-bg">
+    <h3>Welcome to About Page</h3>
+    <ion-card *ngFor="let user of users">
+        <ion-card-header>
+            <h2>{{user.acf.title}}</h2>
+        </ion-card-header>
+        <ion-list>
+            <ion-item>
+                <ion-icon name="leaf" item-start></ion-icon>
+                <div>{{user.acf.technology}}</div>
+            </ion-item>
+            <ion-item>
+                <ion-icon name="leaf" item-start></ion-icon>
+                <div>{{user.acf.jobid}}</div>
+            </ion-item>
+            <ion-item>
+                <ion-icon name="leaf" item-start></ion-icon>
+                <div>{{user.acf.jobshort}}</div>
+            </ion-item>
+            <ion-item>
+                <ion-icon name="leaf" item-start></ion-icon>
+                <div>{{user.acf.nofpos}}</div>
+            </ion-item>
+            <ion-item>
+                <ion-icon name="leaf" item-start></ion-icon>
+                <div>{{user.acf.country}}</div>
+            </ion-item>
+            <ion-item>
+                <ion-icon name="leaf" item-start></ion-icon>
+                <div>{{user.acf.description}}</div>
+            </ion-item>
+            <ion-item>
+                <ion-icon name="leaf" item-start></ion-icon>
+                <div [innerHTML]="user.acf.skills"></div>
+            </ion-item>
+            <ion-item>
+                <ion-icon name="leaf" item-start></ion-icon>
+                <div [innerHTML]="user.acf.secskills"></div>
+            </ion-item>
+            <ion-item>
+                <ion-icon name="leaf" item-start></ion-icon>
+                <div>{{user.acf.otherRequirement}}</div>
+            </ion-item>
+        </ion-list>
+    </ion-card>
+</ion-content>
