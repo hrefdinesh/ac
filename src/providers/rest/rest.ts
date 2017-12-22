@@ -12,7 +12,7 @@ export class RestProvider {
 
 	apiUrl = 'http://localhost/tag/tag-2017/tag-hr/wp-json/acf/v3';
 	constructor(public http: HttpClient) {
-		console.log('Hello RestProvider Provider');
+		// console.log('Hello RestProvider Provider');
 	}
 	getUsers() {
 		return new Promise(resolve => {
