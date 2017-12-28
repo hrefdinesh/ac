@@ -15,6 +15,15 @@
     </button>
   </ion-list> -->
 
+  
+  <ion-slides pager loop="true" effect="coverflow" class="autoheight no-shadow">
+    <ion-slide *ngFor="let item of items" (click)="openNavDetailsPage(item)">
+      <div class="slider-box" style="background-color: green">
+        <h2>{{item.acf.movie_name}}</h2>
+        <p>{{item.acf.released_year}}</p>
+      </div>
+    </ion-slide>
+  </ion-slides>
 
   <ion-list>
     <button ion-item *ngFor="let item of items" (click)="openNavDetailsPage(item)">
@@ -24,8 +33,5 @@
       </div>
     </button>
   </ion-list>
-  <div *ngIf="selectedItem" padding>
-    You navigated here from <b>{{selectedItem.acf.released_year}}</b>
-  </div>
 
 </ion-content>

@@ -22,7 +22,7 @@ export class NavigationDetailsPage {
 })
 export class moList {
   selectedItem: any;
-  items = [];
+  items : any;
   users: any;
   
   constructor(public navCtrl: NavController, public navParams: NavParams, public http: HttpClient) {  
@@ -39,7 +39,7 @@ export class moList {
       },
       () => {
         // this.loading.dismiss();
-        console.log('getData completed');
+        console.log('Loading completed');
 
     });
     

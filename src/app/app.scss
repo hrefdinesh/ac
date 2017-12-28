@@ -15,6 +15,13 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
+$colors: (
+  primary:    #282d3e,
+  white-text:    #ffffff,
+  primary-text:    #00f1ff,
+  secondary: #57d1e6
+);
+
 ion-content{
 	&.cards-bg {
 	    background-color: #f4f4f7;
@@ -23,3 +30,51 @@ ion-content{
 ion-card *{
 	white-space: normal;
 }
+.header-md::after, .tabs-md[tabsPlacement="top"] > .tabbar::after, .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before{
+	display:none;
+}
+.toolbar-background-md{
+	border-color: transparent;
+    background: transparent;
+}
+.bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default,
+.toolbar-title-md{
+	color:color($colors, white-text);
+}
+ion-content.cards-bg,
+.content-md{
+	background: color($colors, primary);
+	color:color($colors, white-text);
+}
+.ion-md-menu:before{
+	color: color($colors, secondary);
+}
+
+.menu-inner .content-md{
+	background-color: color($colors, secondary);
+}
+.menu-inner .item-md{
+	color: color($colors, white-text);
+    background-color: color($colors, secondary);
+}
+
+ion-slides.autoheight{
+	height:auto;
+}
+.slider-box{
+	padding: 10px;
+	margin-bottom: 20px;
+}
+.no-shadow .swiper-pagination-fraction, 
+.no-shadow .swiper-pagination-custom, 
+.no-shadow .swiper-container-horizontal > .swiper-pagination-bullets{
+	bottom: 0;
+}
+.no-shadow .swiper-container-3d .swiper-slide-shadow-right,
+.no-shadow .swiper-slide-shadow-left,
+.no-shadow .swiper-slide-shadow-right{
+	background-image:none;
+}
+// .swiper-container{
+// 	overflow: visible
+// }
